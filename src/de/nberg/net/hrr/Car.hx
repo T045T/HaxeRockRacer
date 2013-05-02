@@ -23,9 +23,7 @@ class Car extends RaceObject
 		super(locX, locY, speedX, speedY, heading);
 	}
 	
-	public static function fromJson( json : String ) : Null<Car> {
-		var parsed : JsonCar = Json.parse(json);
-		
+	public static function fromJson( parsed : JsonCar ) : Null<Car> {
 		if (parsed.message != "car") return null;
 		
 		var car = new Car(parsed.locationX, parsed.locationY, parsed.speedX, parsed.speedY, parsed.facing);

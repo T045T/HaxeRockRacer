@@ -22,7 +22,8 @@ class Track
 		this.startDir = startDir;
 	}
 	
-	public function new( json : String ) {
-		
+	public static function fromJson( track : JsonTrack ) {
+		var tmpDir = Type.createEnum(Direction, track.startDir.toUpperCase());
+		return new Track(track.width, track.height, track.data, tmpDir);
 	}
 }
