@@ -61,6 +61,28 @@ typedef JsonPlayer = {
 	cartype : String
 };
 
+typedef JsonGameState = {
+	message : String,
+	time : Float,
+	cars : Array < JsonCar >,
+	missiles : Array < JsonMissile >,
+	mones : Array < JsonMine >
+};
+
+typedef JsonMissile = {
+	message : String,
+	locationX : Float,
+	locationY : Float,
+	speedX : Float,
+	speedY : Float,
+	shooter : String
+};
+
+typedef JsonMine = {
+	message : String,
+	locationX : Float,
+	locationY : Float
+};
 
 
 class HRRTypes
